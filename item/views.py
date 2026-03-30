@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_object_or_404,redirect
 from .models import Item, Category
 from django.contrib.auth.decorators import login_required
-from .form import NewItemForm,
+from .form import NewItemForm
 # Create your views here
 # def index(request):
 #     return render(request, "item/index.html")
