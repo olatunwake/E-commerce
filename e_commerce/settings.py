@@ -123,5 +123,5 @@ STATIC_URL = 'static/'
 MEDIA_URL= "/media/"
 MEDIA_ROUTE=BASE_DIR/"media"
 LOGIN_URL="/login"
-LOGIN_REDIRECT_URL="home"
-LOGIN_REDIRECT="home"
+LOGIN_REDIRECT_URL="core/index"
+LOGIN_REDIRECT="index"

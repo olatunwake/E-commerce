@@ -26,19 +26,9 @@ def signup(request):
         form=SignupForm
     return render(request,'core/signup.html',{"form":form})
 
-def login(request):
-    pass
-    """if request.method=="POST":
-    form=LoginForm(request.POST) 
-        if form.is_valid():
-            form.save()
-            return redirect("/login/") 
-    else:
-        form=LoginForm() 
-        return render(request,'core/login.html',{"form":form})   """  
-            
 
 
 
 
-# Create your views here.
+
+

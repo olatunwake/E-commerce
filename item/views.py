@@ -7,7 +7,7 @@ from .form import NewItemForm,EditItemForm
 # def index(request):
 #     return render(request, "item/index.html")
 
-def items(reuest):
+def items(request):
     query=request.GET.get('query','')
     category_id= request.GET.get('category_id',0)
     categories=Category.objects.all()
@@ -16,7 +16,7 @@ def items(reuest):
     if category_id:
         items= items.filter(category_id=category_id)
     if query:
-        items=items.filter(Q(name__icontains=query) / Q(description__icontains=query))
+        items = items.filter(Q(name__icontains=query) | Q(description__icontains=query))
 
     return render(request,'item/items.html',{
         'items':items,
@@ -34,7 +34,7 @@ def detail(request,pk):
 
 @login_required
 def edit(request,pk):
-    item =get_object_or_404(Item, pk=pk, created_by=request.user)
+    item =get_object_or_404(Item, id=pk, created_by=request.user)
 
     if request.method=='POST':
         form = EditItemForm(request.POST,request.FILES, instance=item)
