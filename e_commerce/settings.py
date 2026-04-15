@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fh+sav54n@#z14ihsr@bspa(yhss0qfo(jmz-#ow)+wkk_d1@0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'e_commerce.wsgi:application'
+WSGI_APPLICATION = 'e_commerce.wsgi.application'
 
 
 # Database
